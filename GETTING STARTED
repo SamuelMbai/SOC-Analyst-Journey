@@ -1,0 +1,88 @@
+# Introduction to Information Security & Penetration Testing Foundations
+
+## 1. Introduction
+
+Information Security (Infosec) is the practice of protecting data from unauthorized access, modification, misuse, disruption, or destruction. Its primary goal is to ensure the confidentiality, integrity, and availability of information systems and data.
+
+---
+
+## 2. Risk Management Process
+
+I learned that risk management is a structured process that helps organizations protect data while ensuring that productivity is not disrupted.
+
+The process involves five key steps:
+
+- **Risk Identification** – Identifying potential threats and vulnerabilities.
+- **Risk Analysis** – Evaluating the likelihood and impact of each risk.
+- **Risk Evaluation & Prioritization** – Ranking risks based on severity and business impact.
+- **Risk Treatment/Response** – Choosing how to handle risks:
+  - Accept
+  - Avoid
+  - Mitigate (Control)
+  - Transfer
+- **Monitoring & Review** – Continuously tracking risks for changes over time.
+
+This structured approach ensures that risks are managed proactively and efficiently.
+
+---
+
+## 3. Red Team vs Blue Team
+
+In cybersecurity operations:
+
+- The **Red Team** simulates attackers by attempting to exploit systems and find vulnerabilities.
+- The **Blue Team** acts as defenders, focusing on detection, response, and system protection.
+
+Both teams work together to improve an organization’s overall security posture.
+
+---
+
+## 4. Role of Penetration Testers
+
+I learned that penetration testers (security assessors, network testers, web testers, or red teamers) are responsible for identifying security weaknesses such as:
+
+- Vulnerabilities in systems and applications  
+- Misconfigurations  
+- Exposure of sensitive data  
+- Weak authentication mechanisms  
+
+A good penetration tester collaborates with clients to reproduce findings and provide clear remediation or mitigation guidance.
+
+I also learned that testing approaches vary depending on organizational goals, including:
+
+- White-box testing  
+- Black-box testing  
+- Phishing simulations  
+- Targeted red-team exercises  
+
+Accurate risk rating requires understanding the organization’s risk context and applying structured risk assessment principles.
+
+These hands-on concepts form a foundation that applies directly to real-world cybersecurity environments.
+
+---
+
+## 5. Setting Up a Pentest Environment
+
+### Hypervisor
+
+A hypervisor is software that allows users to create and run virtual machines (VMs). It enables multiple operating systems to run on a single physical machine in isolated environments.
+
+For this setup, we use a modified version of **Parrot Security OS (Pwnbox)** to build a local virtual machine. It can be installed using:
+
+- ISO (Optical Disc Image)
+- OVA (Open Virtual Appliance)
+
+---
+
+## 6. Connecting Using VPN
+
+A Virtual Private Network (VPN) allows secure connection to a private network, enabling access to internal systems as if directly connected.
+
+VPN works by routing the user’s internet traffic through a secure remote server instead of the local Internet Service Provider (ISP), improving privacy and secure access to restricted environments.
+
+---
+
+## Conclusion
+
+This foundational module introduced key cybersecurity concepts including risk management, team roles in security operations, penetration testing fundamentals, and secure lab setup using virtualization and VPNs. These concepts form the basis for practical cybersecurity work in real-world environments.
+
