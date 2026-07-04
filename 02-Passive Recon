@@ -1,0 +1,193 @@
+# NAME: SAMUEL KIMWELE MBAI
+**E-MAIL:** mbaisamuel127@gmail.com  
+**REG NO:** ADC-SE02-25035  
+
+# Assignment 2: Passive Recon
+
+## Introduction
+
+In this room, I will be focusing on Passive Reconnaissance.
+
+## Task 1: Introduction
+
+I learnt three command-line tools:
+
+- whois to query WHOIS servers
+- nslookup to query DNS servers
+- dig to query DNS servers\
+
+There are two online services allow us to collect information about our target without directly connecting to it.
+
+- DNSDumpster
+- Shodan.io
+
+---
+
+## Task 2: Active versus passive Recon
+
+Reconnaissance (recon) can be defined as a preliminary survey to gather information about a target. It is the first step in The Unified Kill Chain to gain an initial foothold on a system.
+
+Reconnaissance is divided into:
+
+- Passive Reconnaissance
+- Active Reconnaissance
+
+In passive reconnaissance, you rely on publicly available knowledge. It is the knowledge that you can access from publicly available resources without directly engaging with the target. Think of it like you are looking at target territory from afar without stepping foot on that territory.
+
+Passive reconnaissance activities include many activities, for instance:
+
+- Looking up DNS records of a domain from a public DNS server.
+- Checking job ads related to the target website.
+- Reading news articles about the target company.
+
+Active reconnaissance, on the other hand, cannot be achieved so discreetly. It requires direct engagement with the target. Think of it like you check the locks on the doors and windows, among other potential entry points.
+
+Examples of active reconnaissance activities include:
+
+- Connecting to one of the company servers such as HTTP, FTP, and SMTP.
+- Calling the company in an attempt to get information (social engineering).
+- Entering company premises pretending to be a repairman.
+
+### Answer the questions below
+
+You visit the Facebook page of the target company, hoping to get some of their employee names. What kind of reconnaissance activity is this? (A for active, P for passive)
+
+**P**
+
+You ping the IP address of the company webserver to check if ICMP traffic is blocked. What kind of reconnaissance activity is this? (A for active, P for passive)
+
+**A**
+
+You happen to meet the IT administrator of the target company at a party. You try to use social engineering to get more information about their systems and network infrastructure. What kind of reconnaissance activity is this? (A for active, P for passive)
+
+**A**
+
+---
+
+## Task 3: whois
+
+Helps learn:
+
+- Registrar: Via which registrar was the domain name registered?
+- Contact info of registrant: Name, organization, address, phone, among other things. (unless made hidden via a privacy service)
+- Creation, update, and expiration dates: When was the domain name first registered? When was it last updated? And when does it need to be renewed?
+- Name Server: Which server to ask to resolve the domain name?
+
+The syntax is `whois DOMAIN_NAME`, where DOMAIN_NAME is the domain about which you are trying to get more information.
+
+### Answer the questions below
+
+When was TryHackMe.com registered?
+
+**Answer:** 20180705
+
+What is the registrar of TryHackMe.com?
+
+**Answer:** namecheap.com
+
+Which company is TryHackMe.com using for name servers?
+
+**Answer:** cloudflare.com
+
+---
+
+## Task 4: nslookup and dig
+
+Helps find the ip addresses of a domain name.
+
+OPTIONS contains the query type as shown in the table below.
+
+T
+
+To learn about the email servers and configurations for a particular domain, you can issue:
+
+```bash
+nslookup -type=MX tryhackme.com
+```
+
+For more advanced DNS queries and additional functionality, you can use dig, the acronym for "Domain Information Groper," if you are curious. We can use:
+
+```bash
+dig DOMAIN_NAME
+```
+
+but to specify the record type, we would use:
+
+```bash
+dig DOMAIN_NAME TYPE
+```
+
+Optionally, we can select the server we want to query using:
+
+```bash
+dig @SERVER DOMAIN_NAME TYPE
+```
+
+SERVER is the DNS server that you want to query.
+
+DOMAIN_NAME is the domain name you are looking up.
+
+TYPE contains the DNS record type, as shown in the table provided earlier.
+
+### Answer the questions below
+
+Check the TXT records of thmlabs.com. What is the flag there?
+
+**Answer:** `THM{a5b83929888ed36acb0272971e438d78}`
+
+---
+
+## Task 5: DNSDumpster
+
+Used to find subdomains.
+
+DNSDumpster will return the collected DNS information in easy-to-read tables and a graph. DNSDumpster will also provide any collected information about listening servers.
+
+DNSDumpster <https://dnsdumpster.com/> is an online tool that helps discover subdomains and gather DNS information about a target.
+
+Visit DNSDumpster <https://dnsdumpster.com>
+
+Enter the domain (e.g., tryhackme.com) to search for DNS information.
+
+### Answer the questions below
+
+Lookup tryhackme.com on DNSDumpster. What is one interesting subdomain that you would discover in addition to www and blog?
+
+**Answer:** remote
+
+---
+
+## Task 6: Shodan.io
+
+Shodan.io tries to connect to every device reachable online to build a search engine of connected "things" in contrast with a search engine for web pages. Once it gets a response, it collects all the information related to the service and saves it in the database to make it searchable.
+
+Via this Shodan.io search result, we can learn several things related to our search, such as:
+
+- IP address
+- hosting company
+- geographic location
+- server type and version
+
+### Answer the questions below
+
+According to Shodan.io, what is the first country in the world in terms of the number of publicly accessible Apache servers?
+
+**ANSWER:** United States
+
+Based on Shodan.io, what is the 3rd most common port used for Apache?
+
+**ANSWER:** 8080
+
+Based on Shodan.io, what is the 3rd most common port used for nginx?
+
+**ANSWER:** 5001
+
+---
+
+## Task 7: Conclusion
+
+To conclude this module, I have been given a lot of tools, and more importantly public ones that help to easily access information like domain names, their data within devices, and even their IP address, it's important to note that, these are data are public but still need effort to look and search for, and that's why tools like Shodan.io and DNSDumpster were made.
+
+And finally I am done with the module, you can see my achievement here:
+
+https://tryhackme.com/room/passiverecon?sharerId=67f90c38c3b693c14cb9196b
