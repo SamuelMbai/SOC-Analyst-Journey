@@ -75,15 +75,20 @@ The syntax is `whois DOMAIN_NAME`, where DOMAIN_NAME is the domain about which y
 
 When was TryHackMe.com registered?
 
-**Answer:** 20180705
+**Answer:** 2018-07-05
+<img width="980" height="546" alt="image" src="https://github.com/user-attachments/assets/e630a1b2-e770-46b6-aec4-a08689f5cca9" />
 
 What is the registrar of TryHackMe.com?
 
 **Answer:** namecheap.com
+<img width="975" height="505" alt="image" src="https://github.com/user-attachments/assets/0c61d3d8-2d76-49df-86c5-3a95849e3710" />
+
 
 Which company is TryHackMe.com using for name servers?
 
 **Answer:** cloudflare.com
+<img width="975" height="505" alt="image" src="https://github.com/user-attachments/assets/26dd98e5-3428-4a40-b9b6-ac8bb901cd9a" />
+
 
 ---
 
@@ -92,8 +97,6 @@ Which company is TryHackMe.com using for name servers?
 Helps find the ip addresses of a domain name.
 
 OPTIONS contains the query type as shown in the table below.
-
-T
 
 To learn about the email servers and configurations for a particular domain, you can issue:
 
@@ -130,26 +133,31 @@ TYPE contains the DNS record type, as shown in the table provided earlier.
 Check the TXT records of thmlabs.com. What is the flag there?
 
 **Answer:** `THM{a5b83929888ed36acb0272971e438d78}`
+<img width="975" height="516" alt="image" src="https://github.com/user-attachments/assets/e5fac783-a8de-48be-afa2-b3250a6c2989" />
+
 
 ---
 
 ## Task 5: DNSDumpster
 
-Used to find subdomains.
+It is used to find subdomains.
 
 DNSDumpster will return the collected DNS information in easy-to-read tables and a graph. DNSDumpster will also provide any collected information about listening servers.
 
 DNSDumpster <https://dnsdumpster.com/> is an online tool that helps discover subdomains and gather DNS information about a target.
 
-Visit DNSDumpster <https://dnsdumpster.com>
+Visited DNSDumpster <https://dnsdumpster.com>
 
-Enter the domain (e.g., tryhackme.com) to search for DNS information.
+Entered the domain (e.g., tryhackme.com) to search for DNS information.
 
 ### Answer the questions below
 
 Lookup tryhackme.com on DNSDumpster. What is one interesting subdomain that you would discover in addition to www and blog?
 
 **Answer:** remote
+<img width="824" height="437" alt="image" src="https://github.com/user-attachments/assets/0c62a07e-8df0-457e-a4fe-fba8d238ffa9" />
+
+
 
 ---
 
@@ -169,14 +177,20 @@ Via this Shodan.io search result, we can learn several things related to our sea
 According to Shodan.io, what is the first country in the world in terms of the number of publicly accessible Apache servers?
 
 **ANSWER:** United States
+<img width="902" height="513" alt="image" src="https://github.com/user-attachments/assets/97152fd6-7ec8-4ffa-8a44-3823771094da" />
+
 
 Based on Shodan.io, what is the 3rd most common port used for Apache?
 
 **ANSWER:** 8080
+<img width="975" height="539" alt="image" src="https://github.com/user-attachments/assets/281b5457-5080-49d8-94e4-e9b0f24521ff" />
+
 
 Based on Shodan.io, what is the 3rd most common port used for nginx?
 
 **ANSWER:** 5001
+<img width="975" height="548" alt="image" src="https://github.com/user-attachments/assets/49e7ec8d-1d33-41f2-817e-6ca97d551754" />
+
 
 ---
 
@@ -184,6 +198,6 @@ Based on Shodan.io, what is the 3rd most common port used for nginx?
 
 To conclude this module, I have been given a lot of tools, and more importantly public ones that help to easily access information like domain names, their data within devices, and even their IP address, it's important to note that, these are data are public but still need effort to look and search for, and that's why tools like Shodan.io and DNSDumpster were made.
 
-And finally I am done with the module, you can see my achievement here:
+And finally, you can see my achievement here:
 
 https://tryhackme.com/room/passiverecon?sharerId=67f90c38c3b693c14cb9196b
